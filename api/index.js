@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from  'mongoose';
+import roleRoute from './routes/role.js'
 const app = express();
 
 const connectMongoDB = async () => {
@@ -10,6 +11,7 @@ const connectMongoDB = async () => {
     }
 }
 
+app.use("/api/role", roleRoute)
 app.listen(3000, () =>{
     connectMongoDB();
   console.log('Example app listening on port 3000!')}
