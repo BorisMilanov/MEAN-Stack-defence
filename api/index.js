@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from  'mongoose';
 import roleRoute from './routes/role.js'
 const app = express();
+app.use(express.json());
 
 const connectMongoDB = async () => {
     try {
