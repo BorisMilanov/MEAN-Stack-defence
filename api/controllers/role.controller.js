@@ -1,7 +1,7 @@
 import Role from '../models/Role.js';
 export const createRole = async (req, res, next) => {
     try {
-        if (req.body.body && req.body.role !== '') {
+        if (req.body.role && req.body.role !== '') {
             const newRole = new Role(req.body);
             await newRole.save();
             return res.send("Role Created!");

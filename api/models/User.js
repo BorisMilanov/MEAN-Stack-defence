@@ -3,21 +3,21 @@ import mongoose, {Schema} from "mongoose";
 const UserSchema = mongoose.Schema({
     firstName: {
         type: String,
-        require: true
+        required: true
     },
     username: {
         type: String,
-        require: true,
+        required: true,
         unique: true
     },
     email: {
         type: String,
-        require: true,
+        required: true,
         unique: true
     },
     password: {
         type: String,
-        require: true
+        required: true
     },
     isAdmin: {
         type: Boolean,
@@ -25,8 +25,8 @@ const UserSchema = mongoose.Schema({
     },
     roles:{
         type: [Schema.Types.ObjectId],
-        require:true,
-        ref:"Role"
+        required:true,
+        ref:"roles"
     }
     
 }, { timestamps: true }
