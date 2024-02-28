@@ -15,12 +15,11 @@ export class AuthService {
     return this.http.post<any>(`${apiUrls.authServiceApi}register`,registerObj)
   }
 
-<<<<<<< HEAD
+
   loginService(loginObj: any){
-    console.log(`${apiUrls.authServiceApi}login`);
+    // console.log(`${apiUrls.authServiceApi}login`,loginObj);
     
     return this.http.post<any>(`${apiUrls.authServiceApi}login`,loginObj)
   }
-=======
->>>>>>> parent of 744f138 (Login and header setup 0.1)
+
 }

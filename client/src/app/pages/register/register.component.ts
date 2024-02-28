@@ -14,6 +14,7 @@ export default class  RegisterComponent implements OnInit {
   fb = inject(FormBuilder);
   authService = inject(AuthService);
   registerForm !: FormGroup;
+
   ngOnInit(): void{
     this.registerForm = this.fb.group({
       firstName:['', Validators.required],

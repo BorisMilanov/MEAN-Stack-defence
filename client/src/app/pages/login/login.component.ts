@@ -1,22 +1,20 @@
-<<<<<<< HEAD
+
 import { Component, Inject, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../service/auth.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
-=======
-import { Component } from '@angular/core';
->>>>>>> parent of 744f138 (Login and header setup 0.1)
+
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [],
+  imports: [CommonModule,ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-<<<<<<< HEAD
+
 
 export default class LoginComponent implements OnInit {
   fb = inject(FormBuilder);
@@ -43,8 +41,4 @@ export default class LoginComponent implements OnInit {
       }
     })
   }
-=======
-export default class LoginComponent {
-
->>>>>>> parent of 744f138 (Login and header setup 0.1)
 }
